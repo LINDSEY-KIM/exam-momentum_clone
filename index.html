@@ -1,56 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum clone</title>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momentum clone exam</title>
-
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
-
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
-
 <body>
 
-  <h2 id="clock">00:00</h2>
+    <div class="wrap">
+        <h2 id="clock">00:00</h2>
+        <!-- 01. clock end -->
 
-  <form class="hidden" id="login_form">
+        <form class="hidden" id="login_form">
+    
+            <input 
+                required
+                maxlength="15"
+                type="text"
+                placeholder="What is your name?"
+            />
+    
+            <input type="submit" value="Log In"/>
+    
+        </form>
+        
+        <h1 class="hidden" id="greeting"></h1>
+        <!-- greeting end -->
+        
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+        <!-- quote end -->
 
-    <input 
-      required
-      maxlength="15"
-      type="text"
-      placeholder="What is your name?"
-    />
+        <form id="todo_form">
+            <input type="text" placeholder="Write a To Do and Press Enter" required />
+        </form>
+    
+        <ul id="todo_list">
+        </ul>
+        <!-- list end -->
 
-    <input type="submit" value="Log In"/>
-
-  </form>
-  
-  <h1 class="hidden" id="greeting"></h1>
-
-  <form id="todo_form">
-    <input type="text" placeholder="Write a To Do and Press Enter" required />
-  </form>
-
-  <ul id="todo_list">
-  </ul>
-  
-  <div id="quote">
-    <span></span>
-    <span></span>
-  </div>
-
-  <script src="js/greetings.js"></script>
-  <script src="js/clock.js"></script>
-  <script src="js/quotes.js"></script>
-
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+        <!-- weather end -->
+    </div>
+    
+    <!-- <script src="js/mean.js"></script> -->
+    <script src="js/clock.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todolist.js"></script>
+    <script src="js/weather.js"></script>
 
 </body>
 </html>
